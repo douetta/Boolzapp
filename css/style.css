@@ -1,0 +1,108 @@
+* { /* Vale per tutti i selettori */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Bordo e padding compresi*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+    padding: 8px 32px;
+    height: 70px;
+    background-color: #ece5dd;
+}
+
+/* Regole di stile della chat */
+
+.chat-box {
+    padding: 32px;
+    height: calc(100dvh - 140px); /* dinamic viewport height */
+    background-image: url('../img/background.jpg');
+    overflow-y: auto;
+}
+
+.chat-row {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.chat-row.sent {
+    justify-content: flex-end;
+    padding-left: 32px;
+}
+
+.chat-row.received {
+    justify-content: flex-start;
+    padding-right: 32px;
+}
+
+.chat-message {
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px #00000080; /* nero con trasparenza */
+}
+
+.chat-row.sent > .chat-message {
+    background-color: #d5f9ba;
+}
+
+.chat-row.received > .chat-message {
+    background-color: #ffffff;
+}
+
+time {
+    font-size: 11px;
+    color: #aaaaaa;
+}
+
+/* Fondo pagina */
+footer {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+input {
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: none;
+}
+
+button {
+    font-size: 32px;
+    color: #666666;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button:hoover {
+    color: green;
+}
+
+/* Regole di stile per l'intestazione */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.header-left {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.header-right {
+    display: flex;
+    gap: 8px;
+    font-size: 21px;
+    color: #666666;
+}
